@@ -1,11 +1,11 @@
 {
-    "idSave": 1,
+    "idSave": 83,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
     "musicVolume": 0.0,
-    "environmentVolume": 0.0,
-    "effectsVolume": 0.0,
-    "sentitivity": 15.0,
-    "usersLanguage": 0
+    "environmentVolume": 37.0,
+    "effectsVolume": 100.0,
+    "sentitivity": 18.0,
+    "usersLanguage": 1
 }
