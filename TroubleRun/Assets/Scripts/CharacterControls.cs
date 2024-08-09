@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using YG;
 
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (CapsuleCollider))]
@@ -28,16 +29,18 @@ public class CharacterControls : MonoBehaviour {
 	public Vector3 checkPoint;
 	private bool slide = false;
 
-	void  Start (){
-		// get the distance to ground
+	private void  Start ()
+	{
+		transform.position = YandexGame.savesData.savePosition;
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 	}
 	
-	bool IsGrounded (){
+	public bool IsGrounded()
+	{
 		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
 	}
 	
-	void Awake () {
+	private void Awake () {
 		rb = GetComponent<Rigidbody>();
 		rb.freezeRotation = true;
 		rb.useGravity = false;
@@ -46,7 +49,7 @@ public class CharacterControls : MonoBehaviour {
 		Cursor.visible = false;
 	}
 	
-	void FixedUpdate () 
+	private void FixedUpdate () 
 	{
 		if (moveDir.x != 0 || moveDir.z != 0)
 		{
@@ -134,7 +137,7 @@ public class CharacterControls : MonoBehaviour {
 		}
 	}
 
-	float CalculateJumpVerticalSpeed () => Mathf.Sqrt(2 * jumpHeight * gravity);
+	private float CalculateJumpVerticalSpeed () => Mathf.Sqrt(2 * jumpHeight * gravity);
 
 
 	public void HitPlayer(Vector3 velocityF, float time)

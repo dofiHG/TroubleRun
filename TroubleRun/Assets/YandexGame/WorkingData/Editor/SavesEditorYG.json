@@ -1,11 +1,17 @@
 {
-    "idSave": 83,
+    "idSave": 2494,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
+    "savePosition": {
+        "x": 26.106496810913087,
+        "y": 2.397461414337158,
+        "z": 20.916824340820314
+    },
     "musicVolume": 0.0,
     "environmentVolume": 37.0,
     "effectsVolume": 100.0,
-    "sentitivity": 18.0,
-    "usersLanguage": 1
+    "sentitivity": 11.0,
+    "usersLanguage": 1,
+    "savePointsCount": 0
 }

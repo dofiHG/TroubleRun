@@ -1,4 +1,5 @@
-﻿
+﻿using System.Numerics;
+
 namespace YG
 {
     [System.Serializable]
@@ -10,10 +11,12 @@ namespace YG
         public string language = "ru";
         public bool promptDone;
 
+        public UnityEngine.Vector3 savePosition;
         public float musicVolume;
         public float environmentVolume;
         public float effectsVolume;
         public float sentitivity;
         public int usersLanguage;
+        public int savePointsCount;
     }
 }
